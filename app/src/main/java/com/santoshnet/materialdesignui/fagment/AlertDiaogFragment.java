@@ -1,4 +1,4 @@
-package com.santoshnet.materialdesignui;
+package com.santoshnet.materialdesignui.fagment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,18 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.santoshnet.materialdesignui.R;
+
 /**
  * Created by anupamchugh on 10/12/15.
  */
-public class FixturesFragment extends Fragment {
+public class AlertDiaogFragment extends Fragment {
 
-    public FixturesFragment() {
+    public AlertDiaogFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_fixtures, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_table, container, false);
 
         return rootView;
     }

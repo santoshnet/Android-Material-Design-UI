@@ -1,4 +1,4 @@
-package com.santoshnet.materialdesignui;
+package com.santoshnet.materialdesignui.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,16 +9,19 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.santoshnet.materialdesignui.R;
+import com.santoshnet.materialdesignui.model.NavDrawerModel;
+
 /**
  * Created by anupamchugh on 10/12/15.
  */
-public class DrawerItemCustomAdapter extends ArrayAdapter<DataModel> {
+public class DrawerItemCustomAdapter extends ArrayAdapter<NavDrawerModel> {
 
     Context mContext;
     int layoutResourceId;
-    DataModel data[] = null;
+    NavDrawerModel data[] = null;
 
-    public DrawerItemCustomAdapter(Context mContext, int layoutResourceId, DataModel[] data) {
+    public DrawerItemCustomAdapter(Context mContext, int layoutResourceId, NavDrawerModel[] data) {
 
         super(mContext, layoutResourceId, data);
         this.layoutResourceId = layoutResourceId;
@@ -37,7 +40,7 @@ public class DrawerItemCustomAdapter extends ArrayAdapter<DataModel> {
         ImageView imageViewIcon = (ImageView) listItem.findViewById(R.id.imageViewIcon);
         TextView textViewName = (TextView) listItem.findViewById(R.id.textViewName);
 
-        DataModel folder = data[position];
+        NavDrawerModel folder = data[position];
 
 
         imageViewIcon.setImageResource(folder.icon);

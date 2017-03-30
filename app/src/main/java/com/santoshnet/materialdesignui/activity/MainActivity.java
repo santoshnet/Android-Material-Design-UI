@@ -1,4 +1,4 @@
-package com.santoshnet.materialdesignui;
+package com.santoshnet.materialdesignui.activity;
 
 
 import android.os.Bundle;
@@ -13,6 +13,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.santoshnet.materialdesignui.R;
+import com.santoshnet.materialdesignui.adapter.DrawerItemCustomAdapter;
+import com.santoshnet.materialdesignui.fagment.AlertDiaogFragment;
+import com.santoshnet.materialdesignui.fagment.ButtonFragment;
+import com.santoshnet.materialdesignui.fagment.DialogFragment;
+import com.santoshnet.materialdesignui.fagment.EditTextFragment;
+import com.santoshnet.materialdesignui.fagment.SplashScreenFragment;
+import com.santoshnet.materialdesignui.model.NavDrawerModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,13 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
         setupToolbar();
 
-        DataModel[] drawerItem = new DataModel[5];
+        NavDrawerModel[] drawerItem = new NavDrawerModel[5];
 
-        drawerItem[0] = new DataModel(R.drawable.ic_pages_black_24dp, "SplashScreen");
-        drawerItem[1] = new DataModel(R.drawable.ic_text_fields_black_24dp, "EditText");
-        drawerItem[2] = new DataModel(R.drawable.ic_poll_black_24dp, "Button");
-        drawerItem[3] = new DataModel(R.drawable.ic_library_books_black_24dp, "DialogBox");
-        drawerItem[4] = new DataModel(R.drawable.ic_error_black_24dp, "AlertBox");
+        drawerItem[0] = new NavDrawerModel(R.drawable.ic_pages_black_24dp, "SplashScreen");
+        drawerItem[1] = new NavDrawerModel(R.drawable.ic_text_fields_black_24dp, "EditText");
+        drawerItem[2] = new NavDrawerModel(R.drawable.ic_poll_black_24dp, "Button");
+        drawerItem[3] = new NavDrawerModel(R.drawable.ic_library_books_black_24dp, "DialogBox");
+        drawerItem[4] = new NavDrawerModel(R.drawable.ic_error_black_24dp, "AlertBox");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -53,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerToggle();
 
+        if (savedInstanceState == null) {
+            selectItem(0);
+        }
+
 
     }
 
@@ -62,19 +75,20 @@ public class MainActivity extends AppCompatActivity {
 
         switch (position) {
             case 0:
-                fragment = new ConnectFragment();
+                fragment = new SplashScreenFragment();
+
                 break;
             case 1:
-                fragment = new FixturesFragment();
+                fragment = new EditTextFragment();
                 break;
             case 2:
-                fragment = new TableFragment();
+                fragment = new ButtonFragment();
                 break;
             case 3:
-                fragment = new TableFragment();
+                fragment = new DialogFragment();
                 break;
             case 4:
-                fragment = new TableFragment();
+                fragment = new AlertDiaogFragment();
                 break;
 
             default:
