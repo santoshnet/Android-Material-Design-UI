@@ -19,7 +19,7 @@ public class ButtonFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_table, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_button, container, false);
 
         return rootView;
     }
