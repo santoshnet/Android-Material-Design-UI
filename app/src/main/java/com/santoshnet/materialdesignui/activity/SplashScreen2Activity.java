@@ -1,5 +1,6 @@
 package com.santoshnet.materialdesignui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -48,9 +49,9 @@ public class SplashScreen2Activity extends AppCompatActivity {
                             // Show the progress on TextView
                             tv.setText(progressStatus + "");
                             // If task execution completed
-                            if (progressStatus == 80) {
+                            if (progressStatus == 100) {
                                 // Set a message of completion
-                                //  startActivity(new Intent(getApplicationContext(), SplashScreen2Activity.class));
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             }
                         }
                     });

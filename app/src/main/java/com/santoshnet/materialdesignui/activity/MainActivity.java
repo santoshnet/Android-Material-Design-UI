@@ -20,6 +20,8 @@ import com.santoshnet.materialdesignui.fagment.AlertDiaogFragment;
 import com.santoshnet.materialdesignui.fagment.ButtonFragment;
 import com.santoshnet.materialdesignui.fagment.DialogFragment;
 import com.santoshnet.materialdesignui.fagment.EditTextFragment;
+import com.santoshnet.materialdesignui.fagment.LogInFragment;
+import com.santoshnet.materialdesignui.fagment.RegisterFragment;
 import com.santoshnet.materialdesignui.fagment.SplashScreenFragment;
 import com.santoshnet.materialdesignui.model.NavDrawerModel;
 
@@ -44,13 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
         setupToolbar();
 
-        NavDrawerModel[] drawerItem = new NavDrawerModel[5];
+        NavDrawerModel[] drawerItem = new NavDrawerModel[7];
 
         drawerItem[0] = new NavDrawerModel(R.drawable.ic_pages_black_24dp, "SplashScreen");
         drawerItem[1] = new NavDrawerModel(R.drawable.ic_text_fields_black_24dp, "EditText");
         drawerItem[2] = new NavDrawerModel(R.drawable.ic_poll_black_24dp, "Button");
         drawerItem[3] = new NavDrawerModel(R.drawable.ic_library_books_black_24dp, "DialogBox");
         drawerItem[4] = new NavDrawerModel(R.drawable.ic_error_black_24dp, "AlertBox");
+        drawerItem[5] = new NavDrawerModel(R.drawable.login, "LogIn");
+        drawerItem[6] = new NavDrawerModel(R.drawable.register, "Register");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -89,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 4:
                 fragment = new AlertDiaogFragment();
+                break;
+            case 5:
+                fragment = new LogInFragment();
+                break;
+            case 6:
+                fragment = new RegisterFragment();
                 break;
 
             default:
