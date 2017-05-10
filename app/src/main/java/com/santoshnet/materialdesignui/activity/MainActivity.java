@@ -1,7 +1,6 @@
 package com.santoshnet.materialdesignui.activity;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,6 +17,7 @@ import android.widget.ListView;
 import com.santoshnet.materialdesignui.R;
 import com.santoshnet.materialdesignui.adapter.DrawerItemCustomAdapter;
 import com.santoshnet.materialdesignui.fagment.AlertDiaogFragment;
+import com.santoshnet.materialdesignui.fagment.ButtonFragment;
 import com.santoshnet.materialdesignui.fagment.DialogFragment;
 import com.santoshnet.materialdesignui.fagment.EditTextFragment;
 import com.santoshnet.materialdesignui.fagment.LogInFragment;
@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new EditTextFragment();
                 break;
             case 2:
-                // fragment = new ButtonFragment();
-                startActivity(new Intent(getApplicationContext(), Register2Activity.class));
+                fragment = new ButtonFragment();
+                //startActivity(new Intent(getApplicationContext(), Register2Activity.class));
                 break;
             case 3:
                 fragment = new DialogFragment();
