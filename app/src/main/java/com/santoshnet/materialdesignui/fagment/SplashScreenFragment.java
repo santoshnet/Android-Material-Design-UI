@@ -3,7 +3,6 @@ package com.santoshnet.materialdesignui.fagment;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,10 +56,10 @@ public class SplashScreenFragment extends Fragment {
                             // Show the progress on TextView
                             txt.setText("Loading..." + progressStatus + "");
                             if (progressStatus == 100) {
-                                final FragmentTransaction ft = getFragmentManager().beginTransaction();
+                              /*  final FragmentTransaction ft = getFragmentManager().beginTransaction();
                                 ft.replace(R.id.content_frame, new SplashScreen2Fragment());
                                 ft.addToBackStack(null);
-                                ft.commit();
+                                ft.commit();*/
 
                             }
                         }
