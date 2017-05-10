@@ -152,5 +152,12 @@
     <color name="gray">#808080</color>
     <color name="dimgrey">#696969</color>
 
+    <color name="colorOne">#f4656e</color>
+    <color name="colorTwo">#e922ba</color>
+    <color name="colorThree">#bc59f5</color>
+    <color name="colorFour">#49a0c9</color>
+    <color name="colorFive">#7ad79c</color>
+    <color name="colorSix">#ff3a3d</color>
+
 
 </resources>

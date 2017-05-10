@@ -23,7 +23,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.SpashScreen3Activity" />
         <activity android:name=".activity.Login2Activity" />
-        <activity android:name=".activity.Register2Activity"></activity>
+        <activity android:name=".activity.Register2Activity" />
+        <activity android:name=".activity.ProgressDialogActivity" />
+        <activity android:name=".activity.FlipActivity"></activity>
     </application>
 
 </manifest>

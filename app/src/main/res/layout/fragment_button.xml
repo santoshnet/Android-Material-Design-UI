@@ -63,6 +63,8 @@
             android:background="@drawable/button_transparent_bg"
             android:text="Button Transparant"
             android:textColor="@color/Black" />
+
+
     </LinearLayout>
-    
+
 </ScrollView>

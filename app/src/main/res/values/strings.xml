@@ -15,6 +15,7 @@
         <item>AlertBox</item>
         <item>LogIn</item>
         <item>Register</item>
+        <item>ProgressDialog</item>
 
     </string-array>
 

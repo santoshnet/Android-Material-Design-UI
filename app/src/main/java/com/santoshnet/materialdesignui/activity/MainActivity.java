@@ -1,6 +1,7 @@
 package com.santoshnet.materialdesignui.activity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupToolbar();
 
-        NavDrawerModel[] drawerItem = new NavDrawerModel[7];
+        NavDrawerModel[] drawerItem = new NavDrawerModel[8];
 
         drawerItem[0] = new NavDrawerModel(R.drawable.ic_pages_black_24dp, "SplashScreen");
         drawerItem[1] = new NavDrawerModel(R.drawable.ic_text_fields_black_24dp, "EditText");
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         drawerItem[4] = new NavDrawerModel(R.drawable.ic_error_black_24dp, "AlertBox");
         drawerItem[5] = new NavDrawerModel(R.drawable.login, "LogIn");
         drawerItem[6] = new NavDrawerModel(R.drawable.register, "Register");
+        drawerItem[7] = new NavDrawerModel(R.drawable.progress, "ProgressDialog");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -100,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 6:
                 fragment = new RegisterFragment();
+                break;
+            case 7:
+                startActivity(new Intent(getApplicationContext(), ProgressDialogActivity.class));
                 break;
 
             default:
