@@ -16,9 +16,16 @@
         <item>LogIn</item>
         <item>Register</item>
         <item>ProgressDialog</item>
+        <item>Buttom Sheet</item>
 
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="bottom_sheet">Bottom Sheet</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="print">Print</string>
+    <string name="share">Share</string>
 </resources>

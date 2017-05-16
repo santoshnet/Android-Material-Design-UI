@@ -25,7 +25,11 @@
         <activity android:name=".activity.Login2Activity" />
         <activity android:name=".activity.Register2Activity" />
         <activity android:name=".activity.ProgressDialogActivity" />
-        <activity android:name=".activity.FlipActivity"></activity>
+        <activity android:name=".activity.FlipActivity" />
+        <activity android:name=".activity.BottomSheetActivity"></activity>
+        <activity
+            android:name=".activity.BottomSheet1"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

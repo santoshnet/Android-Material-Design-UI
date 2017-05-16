@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupToolbar();
 
-        NavDrawerModel[] drawerItem = new NavDrawerModel[8];
+        NavDrawerModel[] drawerItem = new NavDrawerModel[9];
 
         drawerItem[0] = new NavDrawerModel(R.drawable.ic_pages_black_24dp, "SplashScreen");
         drawerItem[1] = new NavDrawerModel(R.drawable.ic_text_fields_black_24dp, "EditText");
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         drawerItem[5] = new NavDrawerModel(R.drawable.login, "LogIn");
         drawerItem[6] = new NavDrawerModel(R.drawable.register, "Register");
         drawerItem[7] = new NavDrawerModel(R.drawable.progress, "ProgressDialog");
+        drawerItem[8] = new NavDrawerModel(R.drawable.bottomsheet, "Bottom Sheet");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -105,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 7:
                 startActivity(new Intent(getApplicationContext(), ProgressDialogActivity.class));
+                break;
+            case 8:
+                startActivity(new Intent(getApplicationContext(), BottomSheetActivity.class));
                 break;
 
             default:
